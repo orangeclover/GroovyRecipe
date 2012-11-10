@@ -1,0 +1,1 @@
+println "UTF-8日本語"

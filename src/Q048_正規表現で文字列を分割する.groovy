@@ -1,0 +1,12 @@
+println "1)"
+println "2003,11,21,大根,150円".split(/,/)
+println "2)"
+"2003,11,21,大根,150円".split(/,/).each{println it}
+println "3)"
+println "2003,11,21,大根,150円".split(/,/,3)
+println "4)"
+"2003,11,21,大根,150円".split(/,/,3).each{println it}
+println "5)"
+println "2003,11,21,大根,150円".split(/(,)/)
+println "6)"
+"2003,11,21,大根,150円".split(/(,)/).each{println it}
