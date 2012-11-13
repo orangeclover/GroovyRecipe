@@ -14,9 +14,9 @@ java.security.MessageDigest.metaClass.hexDigest { target ->
     return digestHex
 }
 
+def md = MessageDigest.getInstance("MD5")
 
 def target = "abcdefghijklmn" * 1024
-def md = MessageDigest.getInstance("MD5")
 assert md.hexDigest(target) == "80fb5e0d7dd99e4891f7036c53818e37"
 
 target = "abcdefghijklmn" * 1024 + "x"
