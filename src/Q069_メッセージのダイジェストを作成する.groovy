@@ -7,10 +7,7 @@ java.security.MessageDigest.metaClass.hexDigest { target ->
     def digest = delegate.digest()
     digestHex = ""
     digest.each{c ->
-        tmp = sprintf("%x", (int)(c & 0xff))
-        if (tmp.size() == 1) {
-            digestHex += "0"
-        }
+        tmp = sprintf("%02x", (c & 0xff))
         digestHex +=tmp
 
     }
