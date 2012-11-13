@@ -11,3 +11,7 @@ def validRegexp(pattern){
 
 assert validRegexp("aaa*") == true
 assert validRegexp("*.") == false
+assert validRegexp(/[\x81-\x9f\xe0-\xef][x400\x73\x80-\xfc]/) == true
+assert validRegexp(/[\x81-\x9f\xe0-\xef][x400\x73\x80-\xfc/) == false
+assert validRegexp(/[В†-Вс]/) == true
+assert validRegexp(/[!-~]/) == true
